@@ -1,0 +1,53 @@
+{
+  "name": "eslint-config-ts-mailonline",
+  "version": "0.0.0-SEMANTICALLY-RELEASED",
+  "description": "ESLint TS config for MailOnline",
+  "main": "./index.js",
+  "repository": "git@github.com:MailOnline/eslint-config-ts-mailonline.git",
+  "bugs": {
+    "url": "https://github.com/MailOnline/eslint-config-ts-mailonline/issues"
+  },
+  "homepage": "https://github.com/MailOnline/eslint-config-ts-mailonline",
+  "author": "MailOnline <fe@mailonline.co.uk>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "typescript",
+    "config",
+    "mailonline"
+  ],
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore './**/*.{js,jsx,ts,tsx}'",
+    "check-prettier-conflicts:main": "eslint --print-config './index.js' | eslint-config-prettier-check",
+    "check-prettier-conflicts:react": "eslint --print-config './react.js' | eslint-config-prettier-check",
+    "check-prettier-conflicts": "yarn run check-prettier-conflicts:main && yarn run check-prettier-conflicts:react",
+    "semantic-release": "semantic-release",
+    "test": "echo 'This project has no tests' && exit 0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "semantic-release": "^17.0.4",
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-no-only-tests": "^2.4.0",
+    "eslint-plugin-prefer-arrow": "^1.1.7",
+    "eslint-plugin-react": "^7.18.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && yarn run lint && yarn run check-prettier-conflicts"
+    }
+  }
+}
