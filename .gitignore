@@ -1,0 +1,8 @@
+node_modules
+*.log
+.*
+!.eslintrc.json
+!.gitignore
+!.npmignore
+!.travis.yml
+package-lock.json
