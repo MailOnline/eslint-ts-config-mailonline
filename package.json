@@ -45,6 +45,9 @@
     "eslint-plugin-prefer-arrow": "^1.1.7",
     "eslint-plugin-react": "^7.18.3"
   },
+  "resolutions": {
+    "trim-newlines": "^3.0.1"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged && yarn run lint && yarn run check-prettier-conflicts"
