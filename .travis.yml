@@ -12,3 +12,8 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
+deploy:
+  provider: npm
+  email: 'fe@mailonline.co.uk'
+  api_key:
+    secure: dt6eDTFTM9nJo0KWjq6zyaV1BEAy1OQsDjiU4LR053FlrWk5GflpLSKS8TqsGSdSxgKfpmX83bOOgu7s6tKY99KL0s8p4/QMBSMXrGBGGd5o14zlGrIGy2xCvCttEdEC4+kwZFEy97XtzWAhKZNGL4XqVObi9RkWZuYCLCt3JR92YqlEzpd2b5TrQCnIkLlGfrqC69cgtXeTYR6R2pmY6TOwR697sO+aigRt9s000YbVRydHlvTHvpMnuQ9POzIBMShgzyv5mOZYocsTnLIf/TyiAM05Vg9Uz06OS55cqavFUuQCisT2KtkaAXjv6lmwQhyQqLbw8ytvjbKdng0ogimkrJchNsLdQ1mtWQKspi8q9yaAJKEa30up6SlU6KOr7YSCys2xzjwHDaPfwh0Y4m/wRejXZmKQO80PxuvIel/68n/w/TV6ISwly7FiGteKRXgHMO54Q2GJ3E7iZsy5SYF6jW71w9/t1IDns4UfPE7tP/mhVbs1qTHbjMpGQ4aiMSBBvviguhRbey7yEd8NMnBgB877ybtjnY/CcZ9Ib99S+/qeTDVramO7rlRBAR58AxeGHn8zcoPCM6FpgOYAJ4yO7AIZzzPvkG8GS0Q4cJyk5dQSbY9FHY/3d4MfHlL0ZzQWo6jMrOwYx+j1aJp/LiKy2QCd8VemFN3NvdD4Edo=
