@@ -59,14 +59,10 @@ node_modules/
 }
 ```
 
-7. Add the following pre-commit hook to your `package.json`:
+7. Add the following pre-commit hook to your husky pre-commit script:
 
 ```json
-"husky": {
-  "hooks": {
-    "pre-commit": "pretty-quick --staged && yarn run lint"
-  }
-}
+pretty-quick --staged && yarn run lint
 ```
 
 ## Breaking changes
