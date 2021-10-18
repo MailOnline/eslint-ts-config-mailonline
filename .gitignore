@@ -4,5 +4,7 @@ node_modules
 !.eslintrc.json
 !.gitignore
 !.npmignore
+!.husky
+!.nvmrc
 !.travis.yml
 package-lock.json

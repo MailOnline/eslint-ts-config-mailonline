@@ -1,6 +1,11 @@
 const rules = {
   '@typescript-eslint/adjacent-overload-signatures': 'error',
-  '@typescript-eslint/array-type': ['error', {default: 'array'}],
+  '@typescript-eslint/array-type': [
+    'error',
+    {
+      default: 'array'
+    }
+  ],
   '@typescript-eslint/await-thenable': 'error',
   '@typescript-eslint/ban-types': [
     'error',
@@ -15,9 +20,18 @@ const rules = {
       }
     }
   ],
-  '@typescript-eslint/class-name-casing': 'error',
   '@typescript-eslint/consistent-type-assertions': 'error',
-  '@typescript-eslint/interface-name-prefix': ['error', {prefixWithI: 'never'}],
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      custom: {
+        match: false,
+        regex: '^I[A-Z]'
+      },
+      format: ['PascalCase'],
+      selector: 'interface'
+    }
+  ],
   '@typescript-eslint/no-dynamic-delete': 'error',
   '@typescript-eslint/no-empty-interface': 'error',
   '@typescript-eslint/no-explicit-any': 'error',
@@ -28,7 +42,13 @@ const rules = {
   '@typescript-eslint/no-namespace': 'error',
   '@typescript-eslint/no-non-null-assertion': 'error',
   '@typescript-eslint/no-parameter-properties': 'error',
-  '@typescript-eslint/no-this-alias': ['error', {allowDestructuring: true}],
+  '@typescript-eslint/no-this-alias': [
+    'error',
+    {
+      allowDestructuring: true
+    }
+  ],
+  '@typescript-eslint/no-unused-vars': 'off',
   '@typescript-eslint/prefer-for-of': 'error',
   '@typescript-eslint/promise-function-async': 'error',
   '@typescript-eslint/restrict-plus-operands': 'error',
@@ -44,7 +64,6 @@ const rules = {
   'accessor-pairs': 'error',
   'block-scoped-var': 'error',
   'class-methods-use-this': 'error',
-  eqeqeq: 'error',
   'for-direction': 'error',
   'guard-for-in': 'error',
   'id-length': [
@@ -97,6 +116,7 @@ const rules = {
   'no-unneeded-ternary': 'error',
   'no-unsafe-finally': 'error',
   'no-unused-expressions': 'error',
+  'no-unused-vars': 'off',
   'no-useless-catch': 'error',
   'no-var': 'error',
   'object-shorthand': 'error',
@@ -138,20 +158,22 @@ const rules = {
 module.exports = {
   env: {
     browser: true,
-    es2020: true,
+    es2021: true,
     node: true
   },
   extends: ['eslint-config-prettier'],
+  ignorePatterns: ['**/*.config.js', '**/coverage/*', '**/dist/*'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       globalReturn: false,
       jsx: true
     },
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
     impliedStrict: true,
     project: './tsconfig.json',
-    sourceType: 'module'
+    sourceType: 'module',
+    tsconfigRootDir: __dirname
   },
   plugins: ['no-only-tests', 'import', 'prefer-arrow', '@typescript-eslint'],
   rules,
@@ -159,6 +181,9 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
+      },
+      typescript: {
+        alwaysTryTypes: true
       }
     }
   }
