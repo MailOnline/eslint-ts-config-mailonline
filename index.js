@@ -64,6 +64,7 @@ const rules = {
   'accessor-pairs': 'error',
   'block-scoped-var': 'error',
   'class-methods-use-this': 'error',
+  eqeqeq: 'error',
   'for-direction': 'error',
   'guard-for-in': 'error',
   'id-length': [
