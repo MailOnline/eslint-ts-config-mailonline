@@ -42,6 +42,7 @@ const rules = {
   '@typescript-eslint/no-namespace': 'error',
   '@typescript-eslint/no-non-null-assertion': 'error',
   '@typescript-eslint/no-parameter-properties': 'error',
+  '@typescript-eslint/no-shadow': 'error',
   '@typescript-eslint/no-this-alias': [
     'error',
     {
@@ -109,7 +110,7 @@ const rules = {
   'no-redeclare': 'error',
   'no-return-await': 'error',
   'no-sequences': 'error',
-  'no-shadow': 'error',
+  'no-shadow': 'off',
   'no-sparse-arrays': 'error',
   'no-template-curly-in-string': 'error',
   'no-throw-literal': 'error',
