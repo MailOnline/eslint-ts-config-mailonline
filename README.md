@@ -1,7 +1,7 @@
 # `eslint-config-ts-mailonline`
 
 [![NPM version](http://img.shields.io/npm/v/eslint-config-ts-mailonline.svg?style=flat-square)](https://www.npmjs.org/package/eslint-config-ts-mailonline)
-[![Travis build status](http://img.shields.io/travis/MailOnline/eslint-config-ts-mailonline/master.svg?style=flat-square)](https://travis-ci.org/MailOnline/eslint-config-ts-mailonline)
+[![Build status](http://img.shields.io/github/workflow/status/MailOnline/eslint-config-ts-mailonline/Release?style=flat-square)](https://github.com/MailOnline/eslint-config-ts-mailonline/actions/workflows/release.yml)
 
 MailOnline ESlint Typescript configuration.
 

@@ -7,5 +7,4 @@ node_modules
 !.npmignore
 !.husky
 !.nvmrc
-!.travis.yml
 package-lock.json
