@@ -2,6 +2,7 @@ node_modules
 *.log
 .*
 !.eslintrc.json
+!.github
 !.gitignore
 !.npmignore
 !.husky
