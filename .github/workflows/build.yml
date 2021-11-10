@@ -1,8 +1,8 @@
 name: Build
 on:
   push:
-    branches:
-      - '**'
+    branches_ignore:
+      - master
 jobs:
   build:
     name: Build
