@@ -174,8 +174,7 @@ module.exports = {
     ecmaVersion: 2021,
     impliedStrict: true,
     project: './tsconfig.json',
-    sourceType: 'module',
-    tsconfigRootDir: __dirname
+    sourceType: 'module'
   },
   plugins: ['no-only-tests', 'import', 'prefer-arrow', '@typescript-eslint'],
   rules,
