@@ -41,7 +41,6 @@ const rules = {
   '@typescript-eslint/no-misused-new': 'error',
   '@typescript-eslint/no-namespace': 'error',
   '@typescript-eslint/no-non-null-assertion': 'error',
-  '@typescript-eslint/no-parameter-properties': 'error',
   '@typescript-eslint/no-shadow': 'error',
   '@typescript-eslint/no-this-alias': [
     'error',
@@ -50,6 +49,7 @@ const rules = {
     }
   ],
   '@typescript-eslint/no-unused-vars': 'off',
+  '@typescript-eslint/parameter-properties': 'error',
   '@typescript-eslint/prefer-for-of': 'error',
   '@typescript-eslint/promise-function-async': 'error',
   '@typescript-eslint/restrict-plus-operands': 'error',
