@@ -28,6 +28,7 @@
   "devDependencies": {
     "eslint": "^8.0.1",
     "husky": "^7.0.2",
+    "mol-conventional-changelog": "^1.4.3",
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.1",
     "semantic-release": "^18.0.0",
@@ -45,6 +46,12 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-no-only-tests": "^3.1.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-react": "^7.33.2"
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-unicorn": "^49.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/mol-conventional-changelog"
+    }
   }
 }

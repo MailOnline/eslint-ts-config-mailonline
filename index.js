@@ -154,6 +154,7 @@ const rules = {
       natural: true
     }
   ],
+  'unicorn/prefer-node-protocol': 'error',
   'use-isnan': 'error'
 };
 
@@ -176,7 +177,7 @@ module.exports = {
     project: './tsconfig.json',
     sourceType: 'module'
   },
-  plugins: ['no-only-tests', 'import', 'prefer-arrow', '@typescript-eslint'],
+  plugins: ['no-only-tests', 'import', 'prefer-arrow', '@typescript-eslint', 'unicorn'],
   rules,
   settings: {
     'import/resolver': {
