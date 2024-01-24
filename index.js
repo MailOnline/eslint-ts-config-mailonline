@@ -114,6 +114,7 @@ const rules = {
   'no-sparse-arrays': 'error',
   'no-template-curly-in-string': 'error',
   'no-throw-literal': 'error',
+  'no-undef': 'error',
   'no-undef-init': 'error',
   'no-unneeded-ternary': 'error',
   'no-unsafe-finally': 'error',
@@ -158,14 +159,25 @@ const rules = {
   'use-isnan': 'error'
 };
 
+const overrides = [
+  {
+    files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
+    rules: {
+      'no-undef': 'off'
+    }
+  }
+];
+
 module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
     node: true
   },
   extends: ['eslint-config-prettier'],
   ignorePatterns: ['**/*.config.js', '**/coverage/*', '**/dist/*'],
+  overrides,
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
