@@ -21,6 +21,12 @@ const rules = {
     }
   ],
   '@typescript-eslint/consistent-type-assertions': 'error',
+  '@typescript-eslint/consistent-type-imports': [
+    'error',
+    {
+      fixStyle: 'inline-type-imports'
+    }
+  ],
   '@typescript-eslint/naming-convention': [
     'error',
     {
